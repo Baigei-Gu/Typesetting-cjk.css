@@ -108,6 +108,9 @@ img {
 
 pre, code, pre tt {
     font-family: 'Courier New', Courier, monospace;
+    padding: 0.3em;
+    background-color: #eee;
+    border-radius: 0.2em;
 }
 
 hr {
