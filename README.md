@@ -1,4 +1,4 @@
-# 📘Typesetting-cjk.css
+# Typesetting-cjk.css
 一个好用的文字排版 CSS。
 [项目主页](http://typesetting-cjk-css-git-main.baigei-gu.vercel.app/)
 [Github主页](https://github.com/Baigei-Gu/Typesetting-cjk.css/)

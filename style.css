@@ -10,12 +10,23 @@
     --shadow: 2px 2px 15px #ccc;
 }
 
-@media screen and (max-width: 400px) {
-    :root {
-        font-size: 5vmin;
-    }
+@media screen and (max-width: 350px) {
     blockquote {
         padding-left: 0.5em;
+    }
+    main {
+        width: 85%;
+        margin: 0 auto;
+    }
+    [lang^='zh'] {
+        font-size: 1.5rem;
+        line-height: 2.5rem;
+        letter-spacing: .5rem;
+    }
+    [lang^='en'] {
+        font-size: 1rem;
+        line-height: 3.5rem;
+        word-spacing: .5rem;
     }
 }
 
@@ -50,6 +61,7 @@ h1 {
     padding: 5% 5% 5% 0;
     text-align: left;
     text-align: left;
+    line-height: 2.5rem;
 }
 
 h1:before {
@@ -61,6 +73,7 @@ h1:before {
 
 p {
     text-indent: 2rem;
+    line-height: 2.5rem;
 }
 
 a {
@@ -93,7 +106,9 @@ mark {
 }
 
 blockquote {
+    margin-left: 0.5em;
     padding: 1.2em;
+    padding-left: 1em;
     border-left: 5px solid #000;
     box-shadow: var(--shadow);
 }
@@ -151,15 +166,15 @@ del {
 }
 
 table {
+    margin: 0;
+    padding: 0;
     width: 90%;
-    padding: 1rem;
+    padding: 0.5em;
     word-break: initial;
-    border: none;
+    border: 1px solid #dfe2e5;
 }
 
 table tr {
-    margin: 0;
-    padding: 0;
     border-top: 1px solid #dfe2e5;
 }
 
@@ -170,14 +185,11 @@ table tr:nth-child(2n), thead {
 table tr th {
     font-weight: bold;
     margin: 0;
-    padding: 6px 13px;
     border: 1px solid #dfe2e5;
-    border-bottom: 0;
 }
 
 table tr td {
     margin: 0;
-    padding: 6px 13px;
     border: 1px solid #dfe2e5;
 }
 
