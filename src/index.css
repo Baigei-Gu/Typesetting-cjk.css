@@ -1,5 +1,9 @@
+.title-icon{
+    width:10%;
+    user-select: none;
+    cursor:pointer;
+}
 .repositories-icon{
     width: 10%;
     padding: 0.5%;
-    box-shadow: none;
 }
