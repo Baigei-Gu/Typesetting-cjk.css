@@ -1,7 +1,7 @@
 # 📘Typesetting-cjk.css
 一个好用的文字排版 CSS。
 ## Demo
-[Demo1]([Pages/1.html](https://typesetting-cjk-css.vercel.app/page/1.html) [Demo2](https://typesetting-cjk-css.vercel.app/page/2.html)
+[Demo1](https://typesetting-cjk-css.vercel.app/page/1.html) [Demo2](https://typesetting-cjk-css.vercel.app/page/2.html)
 ## 设定内容
 ### 字体大小
 `h1` 大小为 `1.5rem` ,其他标题大小未设置，正文大小为 `1rem` 。
