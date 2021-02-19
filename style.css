@@ -10,12 +10,15 @@
     --shadow: 2px 2px 15px #ccc; /*阴影设定*/
 }
 
-@media screen and (max-width: 350px) {
+@media screen and (max-width: 500px) {
+    :root{
+        font-size: 5vmin !important;
+    }
     blockquote {
-        padding-left: 0.5em;
+        padding-left: 0.5em !important;
     }
     main {
-        width: 85%;
+        width: 80%;
         margin: 0 auto;
     }
     [lang^='zh'] {
@@ -102,7 +105,7 @@ small {
 
 mark {
     font-weight: 700;
-    background: #ccc;
+    background: #eee;
 }
 
 blockquote {

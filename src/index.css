@@ -1,17 +1,19 @@
-.title-icon{
-
+.title-icon {
+    width: 40% ;
     user-select: none;
-    cursor:pointer;
+    cursor: pointer;
     margin: 1em;
 }
-.repositories-icon{
-    width: 10%;
+
+.repositories-icon {
+    width: 20%;
     padding: 0.5%;
 }
 
-@media screen and (max-width: 400px) {
-    .repositories-icon{
-        height: 5%;
+@media screen and (max-width: 500) {
+    .repositories-icon {
+        width: 15% !important;
+        height: 15% !important;
         padding: 0.5%;
     }
 }
