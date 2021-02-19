@@ -1,7 +1,10 @@
 # 📘Typesetting-cjk.css
 一个好用的文字排版 CSS。
+
+![GitHub stars](https://img.shields.io/github/stars/Baigei-Gu/Typesetting-cjk.css?color=green&style=flat-square)![GitHub issues](https://img.shields.io/github/issues/Baigei-Gu/Typesetting-cjk.css?color=orange&style=flat-square)![license](https://img.shields.io/github/license/Baigei-Gu/Typesetting-cjk.css?color=blue&style=flat-square)
 ## Demo
 [Demo1](https://typesetting-cjk-css.vercel.app/page/1.html) [Demo2](https://typesetting-cjk-css.vercel.app/page/2.html)
+
 ## 设定内容
 ### 字体大小
 `h1` 大小为 `1.5em` ,其他标题大小未设置，正文大小为 `1em` 。
