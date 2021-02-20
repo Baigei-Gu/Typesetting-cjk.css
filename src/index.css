@@ -1,8 +1,7 @@
 .title-icon {
-    width: 40% ;
+    width: 20% ;
     user-select: none;
     cursor: pointer;
-    margin: 1em;
 }
 
 .repositories-icon {
