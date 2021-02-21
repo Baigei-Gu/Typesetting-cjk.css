@@ -10,7 +10,14 @@ jobs:
     strategy: 
       matrix:
         node-version: [12.x] # 配置所需node版本
+
     steps:
+    
+    - name: Use Node.js ${{ matrix.node-version }} 
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node-version }} #规定node.js版本(可不配置)
+    
     - name:  build
       run: |
         npm install postcss-cli autoprefixer
