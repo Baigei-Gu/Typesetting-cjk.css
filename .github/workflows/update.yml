@@ -1,0 +1,17 @@
+name: Update CSS
+on: push
+
+
+
+jobs:
+  bulid:
+    runs-on: ubuntu-18.04
+    name: install-cli
+    steps:
+    - name: Use Node.js 12.x
+      with:
+        node-version: 12.x
+    - name:  build
+      run: |
+        npm install postcss-cli autoprefixer
+        npx postcss *.css --use autoprefixer -d dist/
