@@ -5,13 +5,24 @@ on: push
 
 jobs:
   bulid:
-    runs-on: ubuntu-18.04
-    name: install-cli
+    name: bluid
+    runs-on: ubuntu-latest
     steps:
-    - name: Use Node.js 12.x
-      with:
-        node-version: 12.x
     - name:  build
       run: |
         npm install postcss-cli autoprefixer
         npx postcss *.css --use autoprefixer -d dist/
+      with:
+        node-version: 12.x
+
+    - name: commit
+      run: |
+        git config --global user.email BaigeiGu@foxmail.com
+        git config --global user.name BaigeiGu
+        git add .
+        git commit -m "update" -a
+
+    - name: Push changes
+      uses: ad-m/github-push-action@master
+      with:
+        github_token: ${{ secrets.ghtoken }}
