@@ -5,15 +5,16 @@ on: push
 
 jobs:
   bulid:
-    name: bluid
+    name: bulid
     runs-on: ubuntu-latest
+    strategy: 
+      matrix:
+        node-version: [12.x] # 配置所需node版本
     steps:
     - name:  build
       run: |
         npm install postcss-cli autoprefixer
         npx postcss *.css --use autoprefixer -d dist/
-      with:
-        node-version: 12.x
 
     - name: commit
       run: |
