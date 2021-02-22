@@ -20,7 +20,7 @@ jobs:
     
     - name:  build
       run: |
-        npm install postcss-cli autoprefixer
+        npm install -g postcss-cli autoprefixer
         npx postcss src/*.css --use autoprefixer -d dist/
 
     - name: commit

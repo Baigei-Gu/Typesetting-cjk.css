@@ -204,6 +204,12 @@ html.han-la ol>hanla, html.han-la ul>hanla {
 
 /*移动端*/
 
+@keyframes a{
+    1%{
+        background-color: #000
+    }
+}
+
 @media screen and (max-width: 450px) {
     :root{
         font-size: 5vmin;
