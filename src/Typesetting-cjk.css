@@ -6,17 +6,20 @@
  */
 
 /*加载外置CSS*/
+
 @import url('https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.css');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@200;500;700;900&display=swap');
-
 :root {
     font-size: 8vmin;
     --color: #233;
-    --h1-before: '𒆙'; /*标题前字符*/
+    --h1-before: '𒆙';
+    /*标题前字符*/
     --font-hei: 'Noto Sans SC', 'Noto Sans', 'Helvetica Neue', Helvetica, 'Nimbus Sans L', Arial, 'Liberation Sans', 'PingFang SC', 'Hiragino Sans GB', 'Noto Sans CJK SC', 'Source Han Sans SC', 'Source Han Sans CN', 'Wenquanyi Micro Hei', 'WenQuanYi Zen Hei', 'ST Heiti', SimHei, 'WenQuanYi Zen Hei Sharp', sans-serif;
     --font-song: 'Noto Serif SC', 'Nimbus Roman No9 L', 'Songti SC', 'Noto Serif CJK SC', 'Source Han Serif SC', 'Source Han Serif CN', STSong, 'AR PL New Sung', 'AR PL SungtiL GB', NSimSun, SimSun, 'TW\-Sung', 'WenQuanYi Bitmap Song', 'AR PL UMing CN', 'AR PL UMing HK', 'AR PL UMing TW', 'AR PL UMing TW MBE', PMingLiU, MingLiU, serif;
-    --shadow: 2px 2px 15px #ccc; /*阴影设定*/
+    --shadow: 2px 2px 15px #ccc;
+    --shadow-hover: 8px 8px 15px #ccc;
+    /*阴影设定*/
 }
 
 [lang^='zh'] {
@@ -32,6 +35,7 @@
 }
 
 /*各部分设置*/
+
 body {
     font-family: var(--font-song);
     margin: 0 auto;
@@ -46,20 +50,30 @@ main {
 
 h1 {
     font-family: var(--font-hei);
-    font-size: 1.5rem;
+    font-size: 1.5em;
     margin: 0 5% 5% 5%;
     padding: 5% 5% 5% 0;
     text-align: left;
     text-align: left;
     line-height: 2.5rem;
+    transition:all 1s;
 }
 
 h1:before {
     /*添加标题前的符号*/
     content: var(--h1-before);
     margin-right: 5%;
-    color:#333;
+    color: #ccc;
+
 }
+
+h1:hover{
+
+    opacity: 0.8;
+    font-size: 1.6em;
+    transition:all 1s;
+}
+
 
 p {
     text-indent: 2rem;
@@ -100,7 +114,12 @@ blockquote {
     padding: 1.2em;
     padding-left: 1em;
     border-left: 5px solid #000;
+    transition:all 1s;
     box-shadow: var(--shadow);
+}
+blockquote:hover{
+    transition:all 1s;
+    box-shadow: var(--shadow-hover)
 }
 
 img {
@@ -121,14 +140,18 @@ pre, code, pre tt {
 hr {
     /*分割线*/
     width: 70%;
-    margin: 1em 0 .6em center;
+    text-align: center;
+    transition:all 1s;
+    background: rgba(154, 154, 154, 0.8);
 }
 
 em {
     font-style: unset;
     position: relative;
 }
+
 /*着重号*/
+
 em:after {
     position: absolute;
     top: .8em;
@@ -137,7 +160,9 @@ em:after {
     width: 100%;
     content: '・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・';
     white-space: nowrap;
+
 }
+
 
 abbr {
     cursor: help;
@@ -151,6 +176,7 @@ del {
 }
 
 /*表格*/
+
 table {
     margin: 0;
     padding: 0;
@@ -214,25 +240,24 @@ html.han-la ol>hanla, html.han-la ul>hanla {
 }
 
 /*黑夜模式*/
-@media(prefers-color-scheme:dark){
-    :root{
+
+@media(prefers-color-scheme:dark) {
+    :root {
         --color: #ddd;
         --shadow: 2px 2px 15px #616161;
+        --shadow-hover: 8px 8px 15px #616161;
     }
-    h1::before{
-        color:#ccc;
+    body {
+        background-color: #121212;
     }
-    mark{
+    mark {
         color: var(--color);
         background-color: #555;
     }
-    body{
-        background-color: #1C1C1E;
-    }
-    main{
+    main {
         background-color: #333
     }
-    blockquote{
+    blockquote {
         border-left: 5px solid #ccc;
     }
     table {
@@ -243,30 +268,27 @@ html.han-la ol>hanla, html.han-la ul>hanla {
         word-break: initial;
         border: 1px solid #424242;
     }
-    
     table tr {
         border-top: 1px solid #424242;
     }
-    
     table tr:nth-child(2n), thead {
         background-color: #424242;
     }
-    
     table tr th {
         font-weight: bold;
         margin: 0;
         border: 1px solid #424242;
     }
-    
     table tr td {
         margin: 0;
         border: 1px solid #424242;
     }
-
 }
+
 /*移动端*/
+
 @media screen and (max-width: 450px) {
-    :root{
+    :root {
         font-size: 5vmin;
     }
     blockquote {
