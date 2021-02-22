@@ -1,6 +1,15 @@
+@charset 'UTF-8';
+/*
+ * Typesetting-cjk.css
+ * @author BaigeiGu
+ * @date 2021-02-22
+ */
+
+/*加载外置CSS*/
 @import url('https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.css');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@200;500;700;900&display=swap');
+
 :root {
     font-size: 8vmin;
     --color: #233;
@@ -22,6 +31,7 @@
     word-spacing: .4rem;
 }
 
+/*各部分设置*/
 body {
     font-family: var(--font-song);
     margin: 0 auto;
@@ -114,16 +124,11 @@ hr {
     margin: 1em 0 .6em center;
 }
 
-[draggable] {
-    /*防止来自领导的问号*/
-    cursor: move;
-}
-
 em {
     font-style: unset;
     position: relative;
 }
-
+/*着重号*/
 em:after {
     position: absolute;
     top: .8em;
@@ -145,6 +150,7 @@ del {
     text-decoration: line-through;
 }
 
+/*表格*/
 table {
     margin: 0;
     padding: 0;
@@ -181,6 +187,11 @@ table tr th:last-child, table tr td:last-child {
     margin-bottom: 0;
 }
 
+[draggable] {
+    /*防止来自领导的问号*/
+    cursor: move;
+}
+
 /*中英文之间增加空白*/
 
 body {
@@ -203,12 +214,6 @@ html.han-la ol>hanla, html.han-la ul>hanla {
 }
 
 /*移动端*/
-
-@keyframes a{
-    1%{
-        background-color: #000
-    }
-}
 
 @media screen and (max-width: 450px) {
     :root{
