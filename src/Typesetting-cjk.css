@@ -58,6 +58,7 @@ h1:before {
     /*添加标题前的符号*/
     content: var(--h1-before);
     margin-right: 5%;
+    color:#333;
 }
 
 p {
@@ -217,6 +218,9 @@ html.han-la ol>hanla, html.han-la ul>hanla {
     :root{
         --color: #ddd;
         --shadow: 2px 2px 15px #616161;
+    }
+    h1::before{
+        color:#ccc;
     }
     mark{
         color: var(--color);
