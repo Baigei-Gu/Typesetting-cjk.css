@@ -10,4 +10,7 @@
 ## Demo
 [Demo1](https://typesetting-cjk-css.vercel.app/page/1.html) [Demo2](https://typesetting-cjk-css.vercel.app/page/2.html)
 ## 贡献
-得了丢 Pull Requests 就像，反正我也不会用 Git （
+得了丢 Pull Requests 就行了，反正我也不会用 Git （
+记得写你整了啥。 
+## 发行
+Visual Studio Code + Autoprefixer + minify
