@@ -1,6 +1,15 @@
+@charset 'UTF-8';
+/*
+ * Typesetting-cjk.css
+ * @author BaigeiGu
+ * @date 2021-02-22
+ */
+
+/*加载外置CSS*/
 @import url('https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.css');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@200;500;700;900&display=swap');
+
 :root {
     font-size: 8vmin;
     --color: #233;
@@ -22,6 +31,7 @@
     word-spacing: .4rem;
 }
 
+/*各部分设置*/
 body {
     font-family: var(--font-song);
     margin: 0 auto;
@@ -48,7 +58,6 @@ h1:before {
     /*添加标题前的符号*/
     content: var(--h1-before);
     margin-right: 5%;
-    color: #ccc;
 }
 
 p {
@@ -114,16 +123,11 @@ hr {
     margin: 1em 0 .6em center;
 }
 
-[draggable] {
-    /*防止来自领导的问号*/
-    cursor: move;
-}
-
 em {
     font-style: unset;
     position: relative;
 }
-
+/*着重号*/
 em:after {
     position: absolute;
     top: .8em;
@@ -145,6 +149,7 @@ del {
     text-decoration: line-through;
 }
 
+/*表格*/
 table {
     margin: 0;
     padding: 0;
@@ -181,6 +186,11 @@ table tr th:last-child, table tr td:last-child {
     margin-bottom: 0;
 }
 
+[draggable] {
+    /*防止来自领导的问号*/
+    cursor: move;
+}
+
 /*中英文之间增加空白*/
 
 body {
@@ -202,14 +212,55 @@ html.han-la ol>hanla, html.han-la ul>hanla {
     display: none;
 }
 
-/*移动端*/
-
-@keyframes a{
-    1%{
-        background-color: #000
+/*黑夜模式*/
+@media(prefers-color-scheme:dark){
+    :root{
+        --color: #ddd;
+        --shadow: 2px 2px 15px #616161;
     }
-}
+    mark{
+        color: var(--color);
+        background-color: #555;
+    }
+    body{
+        background-color: #1C1C1E;
+    }
+    main{
+        background-color: #333
+    }
+    blockquote{
+        border-left: 5px solid #ccc;
+    }
+    table {
+        margin: 0;
+        padding: 0;
+        width: 90%;
+        padding: 0.5em;
+        word-break: initial;
+        border: 1px solid #424242;
+    }
+    
+    table tr {
+        border-top: 1px solid #424242;
+    }
+    
+    table tr:nth-child(2n), thead {
+        background-color: #424242;
+    }
+    
+    table tr th {
+        font-weight: bold;
+        margin: 0;
+        border: 1px solid #424242;
+    }
+    
+    table tr td {
+        margin: 0;
+        border: 1px solid #424242;
+    }
 
+}
+/*移动端*/
 @media screen and (max-width: 450px) {
     :root{
         font-size: 5vmin;
