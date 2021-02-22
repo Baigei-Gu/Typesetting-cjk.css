@@ -1,0 +1,232 @@
+@import url('https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.css');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@200;500;700;900&display=swap');
+:root {
+    font-size: 8vmin;
+    --color: #233;
+    --h1-before: '𒆙'; /*标题前字符*/
+    --font-hei: 'Noto Sans SC', 'Noto Sans', 'Helvetica Neue', Helvetica, 'Nimbus Sans L', Arial, 'Liberation Sans', 'PingFang SC', 'Hiragino Sans GB', 'Noto Sans CJK SC', 'Source Han Sans SC', 'Source Han Sans CN', 'Wenquanyi Micro Hei', 'WenQuanYi Zen Hei', 'ST Heiti', SimHei, 'WenQuanYi Zen Hei Sharp', sans-serif;
+    --font-song: 'Noto Serif SC', 'Nimbus Roman No9 L', 'Songti SC', 'Noto Serif CJK SC', 'Source Han Serif SC', 'Source Han Serif CN', STSong, 'AR PL New Sung', 'AR PL SungtiL GB', NSimSun, SimSun, 'TW\-Sung', 'WenQuanYi Bitmap Song', 'AR PL UMing CN', 'AR PL UMing HK', 'AR PL UMing TW', 'AR PL UMing TW MBE', PMingLiU, MingLiU, serif;
+    --shadow: 2px 2px 15px #ccc; /*阴影设定*/
+}
+
+[lang^='zh'] {
+    font-size: 1.5rem;
+    line-height: 2.3rem;
+    letter-spacing: .3rem;
+}
+
+[lang^='en'] {
+    font-size: 1rem;
+    line-height: 3rem;
+    word-spacing: .4rem;
+}
+
+body {
+    font-family: var(--font-song);
+    margin: 0 auto;
+    color: var(--color);
+}
+
+main {
+    margin: 6% 5% 5% 5%;
+    padding: 5% 5% 5% 5%;
+    box-shadow: var(--shadow);
+}
+
+h1 {
+    font-family: var(--font-hei);
+    font-size: 1.5rem;
+    margin: 0 5% 5% 5%;
+    padding: 5% 5% 5% 0;
+    text-align: left;
+    text-align: left;
+    line-height: 2.5rem;
+}
+
+h1:before {
+    /*添加标题前的符号*/
+    content: var(--h1-before);
+    margin-right: 5%;
+    color: #ccc;
+}
+
+p {
+    text-indent: 2rem;
+    line-height: 2.5rem;
+}
+
+a {
+    color: var(--color);
+}
+
+b, strong {
+    font-size: 700;
+}
+
+u {
+    text-decoration: underline;
+}
+
+ul {
+    padding-left: 3rem;
+}
+
+ol {
+    list-style-type: simp-chinese-informal;
+}
+
+small {
+    font-size: calc(1em * 0.8);
+}
+
+mark {
+    font-weight: 700;
+    background: #eee;
+}
+
+blockquote {
+    margin-left: 0.5em;
+    padding: 1.2em;
+    padding-left: 1em;
+    border-left: 5px solid #000;
+    box-shadow: var(--shadow);
+}
+
+img {
+    margin: 0 0 0 0 auto;
+    width: 90%;
+    padding: .5rem;
+    border: 2px solid #ccc;
+    box-shadow: var(--shadow);
+}
+
+pre, code, pre tt {
+    font-family: 'Courier New', Courier, monospace;
+    padding: 0.3em;
+    background-color: #eee;
+    border-radius: 0.2em;
+}
+
+hr {
+    /*分割线*/
+    width: 70%;
+    margin: 1em 0 .6em center;
+}
+
+[draggable] {
+    /*防止来自领导的问号*/
+    cursor: move;
+}
+
+em {
+    font-style: unset;
+    position: relative;
+}
+
+em:after {
+    position: absolute;
+    top: .8em;
+    left: 0;
+    overflow: hidden;
+    width: 100%;
+    content: '・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・';
+    white-space: nowrap;
+}
+
+abbr {
+    cursor: help;
+    border-bottom: 1px dotted;
+    font-variant: normal;
+    text-decoration: none;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+table {
+    margin: 0;
+    padding: 0;
+    width: 90%;
+    padding: 0.5em;
+    word-break: initial;
+    border: 1px solid #dfe2e5;
+}
+
+table tr {
+    border-top: 1px solid #dfe2e5;
+}
+
+table tr:nth-child(2n), thead {
+    background-color: #f6f9fb;
+}
+
+table tr th {
+    font-weight: bold;
+    margin: 0;
+    border: 1px solid #dfe2e5;
+}
+
+table tr td {
+    margin: 0;
+    border: 1px solid #dfe2e5;
+}
+
+table tr th:first-child, table tr td:first-child {
+    margin-top: 0;
+}
+
+table tr th:last-child, table tr td:last-child {
+    margin-bottom: 0;
+}
+
+/*中英文之间增加空白*/
+
+body {
+    -ms-text-autospace: ideograph-alpha;
+}
+
+html.han-la hanla:after {
+    content: " ";
+    display: inline;
+    font-family: Arial;
+    font-size: 0.89em;
+}
+
+html.han-la code hanla, html.han-la pre hanla, html.han-la kbd hanla, html.han-la samp hanla {
+    display: none;
+}
+
+html.han-la ol>hanla, html.han-la ul>hanla {
+    display: none;
+}
+
+/*移动端*/
+
+@keyframes a{
+    1%{
+        background-color: #000
+    }
+}
+
+@media screen and (max-width: 450px) {
+    :root{
+        font-size: 5vmin;
+    }
+    blockquote {
+        padding-left: 0.5em;
+    }
+    main {
+        width: 80%;
+        margin: 0 auto;
+    }
+    [lang^='zh'] {
+        line-height: 2.5rem;
+        letter-spacing: .5rem;
+    }
+    [lang^='en'] {
+        line-height: 3.5rem;
+        word-spacing: .5rem;
+    }
+}
