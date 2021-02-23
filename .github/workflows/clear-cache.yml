@@ -1,14 +1,14 @@
-name: clear-cache
+name: Clear-cache
 on: push
 
 jobs:
-  - name: clear
+  Clear:
+      name: Clear-cache
       runs-on: ubuntu-latest
-  steps:
-    - uses: actions/checkout@v1
-    - name: clear-cache
-      run: |
-        echo 准备中
-        wget https://purge.jsdelivr.net/gh/Baigei-Gu/Typesetting-cjk.css@dev/src/Typesetting-cjk.css
-        wget https://purge.jsdelivr.net/gh/Baigei-Gu/Typesetting-cjk.css/src/Typesetting-cjk.css
-        echo 工作完成
+      steps:
+        - name: Clear-cache
+          run: |
+            echo 准备中
+            wget https://purge.jsdelivr.net/gh/Baigei-Gu/Typesetting-cjk.css@dev/src/Typesetting-cjk.css
+            wget https://purge.jsdelivr.net/gh/Baigei-Gu/Typesetting-cjk.css/src/Typesetting-cjk.css
+            echo 工作完成
