@@ -6,7 +6,6 @@ jobs:
       name: clear-cache
       runs-on: ubuntu-latest
       steps:
-        - uses: actions/checkout@v1
         - name: clear-cache
           run: |
             echo 准备中
