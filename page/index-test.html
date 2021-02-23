@@ -1,0 +1,56 @@
+<!doctype html>
+
+<html lang='zh-CN'>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typesetting-cjk.css</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="../src/Typesetting-cjk.css">
+    <link rel="stylesheet" href="./page/index.css">
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <main>
+        <p>
+            <svg class='title-icon' onclick="window.open('https://typesetting-cjk-css-git-main.baigei-gu.vercel.app/')" type="image/svg+xml" t="1613743396896" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="638" width="200"
+                height="200">
+                <path
+                    d="M213.333333 42.666667l682.666667 0 0 938.666667-682.666667 0q-52.992 0-90.496-37.504t-37.504-90.496l0-682.666667q0-52.992 37.504-90.496t90.496-37.504zM810.666667 896l0-85.333333-597.333333 0q-17.664 0-30.165333 12.501333t-12.501333 30.165333 12.501333 30.165333 30.165333 12.501333l597.333333 0zM810.666667 725.333333l0-597.333333-597.333333 0q-17.664 0-30.165333 12.501333t-12.501333 30.165333l0 562.005333q20.992-7.338667 42.666667-7.338667l597.333333 0z"
+                    p-id="639" fill="#515151"></path>
+            </svg>
+
+        </p>
+        <h1>Typesetting cjk.css</h1>
+        <p>一个好用的文字排版 CSS。支持黑夜模式。</p>
+        <p>如你所愿，为中文汉字阅读而生。</p>
+        <p><a href='https://typesetting-cjk-css-git-main.baigei-gu.vercel.app/'>项目主页</a></p>
+        <p><a href='https://github.com/Baigei-Gu/Typesetting-cjk.css/'>Github主页</a></p>
+        <p><img src="https://img.shields.io/github/stars/Baigei-Gu/Typesetting-cjk.css?color=green&amp;style=flat-square" referrerpolicy="no-referrer" alt="GitHub stars" class='repositories-icon'><img src="https://img.shields.io/github/issues/Baigei-Gu/Typesetting-cjk.css?color=orange&amp;style=flat-square"
+                referrerpolicy="no-referrer" alt="GitHub issues" class='repositories-icon'><img src="https://img.shields.io/github/license/Baigei-Gu/Typesetting-cjk.css?color=blue&amp;style=flat-square" referrerpolicy="no-referrer" alt="license" class='repositories-icon'></p>
+        <h2>Demo</h2>
+        <p><a href='./page/1.html'>Demo1 使用测试版本</a>
+            <a href='./page/2.html'>Demo2</a>
+        </p>
+        <h2>设定内容</h2>
+        <h3>字体大小</h3>
+        <p><code>h1</code> 大小为 <code>1.5em</code> ,其他标题大小未设置，正文大小为 <code>1em</code> 。 在宽度大于 <code>400px</code> 时，总字体大小为 <code>10vmin</code>，否则为 <code>0.5vmin</code>。 带有 <code>small</code> 标签的字体大小为 <code>calc(1em * 0.8)</code>。</p>
+        <h3>字体选择</h3>
+        <p>此 CSS 使用了来自 Google Fonts 的<code>Noto Sans SC</code> 和 <code>Noto Serlf SC</code>，基于<a href='https://zenozeng.github.io/fonts.css/'>Fonts.css</a> 的 <code>font-family</code> 设定，并进行了一些修改。尽量确保在各种情况下都可以获得最佳的显示效果。
+        </p>
+        <h3>列表</h3>
+        <p>为有序列表使用了中文序号，让页面更加美观。</p>
+        <p><code>list-style-type: simp-chinese-informal;</code></p>
+        <h3>空格</h3>
+        <p>已经内置了对 <a href='https://github.com/mastermay/text-autospace.js/'>Text.autospace.js</a> 的支持。需要时可直接引用 Javascript 文件使用。</p>
+        <h2>建议</h2>
+        <p>移动端已经完成，但是不建议使用 <code>&lt;blockquote&gt;</code> 标签。</p>
+        <p>请注意，在页面最开始一定要有 <code>&lt;html lang=&#39;zh-CN&#39;&gt;</code> 这个语言声明！ 需要使用的部分一定要用 <code>&lt;main&gt;</code> 标签包裹！</p>
+        <p>为了美观，请使用中文直角引号。</p>
+    </main>
+</body>
+
+</html>
