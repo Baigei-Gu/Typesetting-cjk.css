@@ -28,3 +28,5 @@ indent_style = space
 [{package.json,.travis.yml}]
 indent_style = space
 
+[*.yml]
+indent_size = 2

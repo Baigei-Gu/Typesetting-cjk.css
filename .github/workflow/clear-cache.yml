@@ -1,0 +1,11 @@
+name: clear-cache
+on: push
+
+jobs:
+  - name: clear
+    runs-on: ubuntu-latest
+    run: |
+      echo 准备中
+      wget https://purge.jsdelivr.net/gh/Baigei-Gu/Typesetting-cjk.css@dev/src/Typesetting-cjk.css
+      wget https://purge.jsdelivr.net/gh/Baigei-Gu/Typesetting-cjk.css/src/Typesetting-cjk.css
+      echo 工作完成
