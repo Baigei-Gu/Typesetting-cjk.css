@@ -8,7 +8,13 @@ jobs:
       steps:
         - name: Clear-cache
           run: |
-            echo 准备中
+            echo 𒆙 准备中
             wget https://purge.jsdelivr.net/gh/Baigei-Gu/Typesetting-cjk.css@dev/src/Typesetting-cjk.css
+            echo 𒆙 Dev src complete.
             wget https://purge.jsdelivr.net/gh/Baigei-Gu/Typesetting-cjk.css/src/Typesetting-cjk.css
-            echo 工作完成
+            echo 𒆙 Stable src complete.
+            wget https://purge.jsdelivr.net/gh/Baigei-Gu/Typesetting-cjk.css/dist/Typesetting-cjk.css
+            echo 𒆙 Stable dist complete.
+            wget https://purge.jsdelivr.net/gh/Baigei-Gu/Typesetting-cjk.css/dist/Typesetting-cjk.min.css
+            echo 𒆙 Stable dist min complete.
+            echo 𒆙 All complete 𒆙

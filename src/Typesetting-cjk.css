@@ -5,14 +5,14 @@
  * @Baigei-Gu
  * @date 2021-02-23
  * @version v0.13-alpha(2)
- */
-
-
-/*加载外置CSS*/
+*/
 
 @import url('https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.css');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@200;500;700;900&display=swap');
+
+/*加载外置CSS*/
+
 :root {
     font-size: 8vmin;
     --color: #233;
@@ -22,6 +22,8 @@
     --font-song: 'Noto Serif SC', 'Nimbus Roman No9 L', 'Songti SC', 'Noto Serif CJK SC', 'Source Han Serif SC', 'Source Han Serif CN', STSong, 'AR PL New Sung', 'AR PL SungtiL GB', NSimSun, SimSun, 'TW\-Sung', 'WenQuanYi Bitmap Song', 'AR PL UMing CN', 'AR PL UMing HK', 'AR PL UMing TW', 'AR PL UMing TW MBE', PMingLiU, MingLiU, serif;
     --shadow: 2px 2px 15px #ccc;
     --shadow-hover: 8px 8px 15px #ccc;
+    --code-bg-color: #ccc;
+    --code-bg-color-hover: #ddd;
     /*阴影设定*/
 }
 
@@ -40,13 +42,12 @@
 
 /*各部分设置*/
 
-body {
-    font-family: var(--font-song);
-    margin: 0 auto;
-    color: var(--color);
-}
-
 main {
+    font-family: var(--font-song);
+    color: var(--color);
+    /*改善字体渲染*/
+    -webkit-font-smoothing: antialiased;
+    text-rendering: geometricPrecision;
     margin: 6% 5% 5% 5%;
     padding: 5% 5% 5% 5%;
     box-shadow: var(--shadow);
@@ -59,7 +60,7 @@ h1 {
     text-align: left;
     text-align: left;
     line-height: 2.5rem;
-    transition: font-size 1s;
+    transition: font-size 0.5s;
 }
 
 h1:before {
@@ -138,7 +139,7 @@ code,
 pre tt {
     font-family: 'Courier New', Courier, monospace;
     padding: 0.3em;
-    background-color: #eee;
+    background-color: var(--code-bg-color);
     border-radius: 0.2em;
 }
 
@@ -260,6 +261,8 @@ html.han-la ul>hanla {
         --color: #ddd;
         --shadow: 2px 2px 15px #616161;
         --shadow-hover: 8px 8px 15px #616161;
+        --code-bg-color: #333;
+        --code-bg-color-hover: #222;
     }
     body {
         background-color: #121212;
@@ -306,6 +309,10 @@ html.han-la ul>hanla {
 @media screen and (max-width: 450px) {
      :root {
         font-size: 5vmin;
+        hyphens: auto;
+    }
+    h1 {
+        word-break: break-all
     }
     blockquote {
         padding-left: 0.5em;
