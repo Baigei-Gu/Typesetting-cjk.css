@@ -10,5 +10,11 @@ jobs:
           run: |
             echo 准备中
             wget https://purge.jsdelivr.net/gh/Baigei-Gu/Typesetting-cjk.css@dev/src/Typesetting-cjk.css
+            echo Dev src complete.
             wget https://purge.jsdelivr.net/gh/Baigei-Gu/Typesetting-cjk.css/src/Typesetting-cjk.css
-            echo 工作完成
+            echo Stable src complete.
+            wget https://purge.jsdelivr.net/gh/Baigei-Gu/Typesetting-cjk.css/dist/Typesetting-cjk.css
+            echo Stable dist complete.
+            wget https://purge.jsdelivr.net/gh/Baigei-Gu/Typesetting-cjk.css/dist/Typesetting-cjk.min.css
+            echo Stable dist min complete.
+            echo All complete
